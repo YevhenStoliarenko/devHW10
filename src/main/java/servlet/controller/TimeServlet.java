@@ -16,10 +16,10 @@ public class TimeServlet extends HttpServlet {
         try {
             String timezone = req.getParameter("timezone");
             if (timezone.equals("")) {
-                resp.getWriter().write(TimeZome.getLocalTime("GMT+2") + " " + "GMT+2");
+                resp.getWriter().write(TimeZone.getLocalTime("GMT+2") + " " + "GMT+2");
             } else {
                 String replace = timezone.replace(" ", "+");
-                resp.getWriter().write(TimeZome.getLocalTime(replace) + " " + replace);
+                resp.getWriter().write(TimeZone.getLocalTime(replace) + " " + replace);
             }
 
         } catch (ParseException e) {
